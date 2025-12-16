@@ -1,0 +1,58 @@
+.aboutAutherWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px 24px 22px 24px;
+  border-top: 1px solid #e5e6ea;
+  margin-top: 32px;
+}
+
+.aboutAutherContent {
+  font-style: italic;
+  color: #4e5265;
+  font-weight: 600;
+}
+
+.imageWrapper {
+  height: 100px;
+  width: 100px;
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.navigationSection {
+  margin-top: 32px;
+  border-top: 1px solid #e5e6ea;
+  padding-top: 32px;
+}
+
+.navRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1.25rem;
+}
+
+.navButton {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border: 1px solid black;
+  padding: 6px 12px;
+  background: transparent;
+  cursor: pointer;
+}
+
+.arrowCircle {
+  display: flex;
+  height: 28px;
+  width: 28px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 1px solid black;
+}
+
+.rotate {
+  transform: rotate(180deg);
+}

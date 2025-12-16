@@ -1,0 +1,41 @@
+.breadcrumb {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  font-size: 14px;
+  position: sticky;
+  top: 0;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-body);
+}
+
+.link {
+  color: #262d4d;
+  text-decoration: none;
+  transition: color 0.2s ease;
+  font-weight: 700;
+}
+
+.link:hover,
+.link:focus-visible {
+  color: #1b1b1b;
+  outline: none;
+}
+
+.current {
+  color: #262d4d;
+  font-weight: 400;
+}
+
+.separator {
+  color: #262d4d;
+  user-select: none;
+}
+
+@media (max-width: 768px) {
+  .breadcrumb {
+    font-size: 13px;
+    flex-wrap: wrap;
+  }
+}

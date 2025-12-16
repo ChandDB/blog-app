@@ -1,0 +1,48 @@
+.wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  margin-left: 0.25rem;
+  font-weight: 500;
+  color: #5b5b5b;
+}
+
+@media (max-width: 640px) {
+  .label {
+    font-size: 0.875rem;
+  }
+}
+
+.textarea {
+  width: 100%;
+  resize: none;
+  border-radius: 0.75rem;
+  border: 1px solid #b9b9b9;
+  background-color: transparent;
+  padding: 0.5rem 1rem;
+  color: #1b1b1b;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.textarea:focus {
+  outline: none;
+}
+
+.hideScrollbar {
+  scrollbar-width: none; /* Firefox */
+}
+
+.hideScrollbar::-webkit-scrollbar {
+  display: none; /* Chrome, Safari */
+}
+
+.supportiveText {
+  margin-left: 0.25rem;
+  font-size: 0.875rem;
+  color: #ef4444;
+}

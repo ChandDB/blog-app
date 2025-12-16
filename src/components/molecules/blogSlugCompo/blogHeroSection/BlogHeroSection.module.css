@@ -1,0 +1,30 @@
+.blogHero {
+  width: 100%;
+  aspect-ratio: 4.7375;
+}
+
+.blogHeroImage {
+  object-fit: cover !important;
+}
+
+.blogHeroHeader {
+  padding: 64px 0;
+}
+
+.headingLargeSemiBold {
+  font-family: var(--font-body); /* Lato */
+  font-weight: 600;
+  font-style: normal;
+  font-size: 48px;
+  line-height: 66px;
+  letter-spacing: var(--letter-spacing-heading);
+  text-align: center;
+  vertical-align: bottom;
+}
+
+@media (max-width: 768px) {
+  .headingLargeSemiBold {
+    font-size: 28px;
+    line-height: 40px;
+  }
+}

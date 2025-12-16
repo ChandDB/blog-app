@@ -1,0 +1,117 @@
+.heading {
+  color: #000000;
+  font-family: var(--font-body);
+  font-weight: 500;
+  font-size: var(--font-size-content-large);
+  line-height: var(--line-height-content-large);
+  letter-spacing: var(--letter-spacing-body);
+  margin-bottom: 30px;
+}
+
+.section {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 0;
+}
+
+.formRow {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.leftColumn {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  width: 100%;
+}
+
+.inputWrapper {
+  width: 100%;
+  gap: 0.25rem;
+}
+
+.input {
+  background-color: #d1d5db;
+}
+
+.textareaWrapper {
+  gap: 0;
+}
+
+.textarea {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  background-color: #d1d5db;
+}
+
+.bottomRow {
+  margin-top: 0.75rem;
+  display: flex;
+  align-items: stretch;
+  gap: 0.5rem;
+}
+
+.ratingBox {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  border-radius: 0.375rem;
+  background-color: #d1d5db;
+  padding: 0.5rem;
+}
+
+.ratingText {
+  font-weight: 500;
+}
+
+.ratingIcons {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.ratingButton {
+  height: 100%;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+.activeRating {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  border-radius: 0.5rem;
+  padding: 10px 24px 10px 16px;
+}
+
+.submitButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.25rem;
+  border-radius: 0.5rem;
+  background-color: #111827;
+  padding: 0.5rem 0.75rem;
+  color: #ffffff;
+  border: none;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+
+  .bottomRow {
+    flex-direction: column;
+  }
+
+  .submitButton {
+    width: 100%;
+  }
+}

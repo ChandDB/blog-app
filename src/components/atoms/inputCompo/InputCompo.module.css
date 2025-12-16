@@ -1,0 +1,46 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.label {
+  margin-left: 0.25rem;
+  font-weight: 500;
+  color: #3e3232;
+}
+
+@media (max-width: 640px) {
+  .label {
+    font-size: 0.875rem;
+  }
+}
+
+.input {
+  width: 100%;
+  height: 2.25rem;
+  border-radius: 0.75rem;
+  border: 1px solid #b9b9b9;
+  background-color: transparent;
+  padding: 0.5rem 0.625rem;
+  color: #1b1b1b;
+  font-size: 1rem;
+}
+
+@media (min-width: 640px) {
+  .input {
+    height: 3rem;
+    border-radius: 0.75rem;
+    padding: 0.5rem 1rem;
+  }
+}
+
+.input:focus {
+  outline: none;
+}
+
+.supportiveText {
+  margin-left: 0.25rem;
+  font-size: 0.875rem;
+  color: #ef4444;
+}

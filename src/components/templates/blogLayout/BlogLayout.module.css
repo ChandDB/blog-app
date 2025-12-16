@@ -1,0 +1,30 @@
+.layout {
+  display: flex;
+  gap: 20px;
+}
+
+/* max-md */
+@media (max-width: 768px) {
+  .layout {
+    flex-direction: column;
+  }
+}
+
+.sidebar {
+  width: 341px;
+  padding: 24px 20px;
+}
+
+@media (max-width: 1024px) {
+  .sidebar {
+    width: 263px;
+    padding: 24px 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .sidebar {
+    width: 100%;
+    padding: 24px 15px;
+  }
+}
