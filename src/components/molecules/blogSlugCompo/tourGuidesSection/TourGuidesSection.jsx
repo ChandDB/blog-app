@@ -9,19 +9,19 @@ const tourGuidesData = [
     name: "Miranda Rachel",
     location: "Jombang, Jawa timur",
     image: "/assets/tour-guide/tour-guide1.png",
-    rating: 4,
+    rating: 4.0,
   },
   {
     name: "Danielle Marsh",
     location: "Wonosobo, Jawa ten..",
     image: "/assets/tour-guide/tour-guide2.png",
-    rating: 4,
+    rating: 4.0,
   },
   {
     name: "Mohit Singh",
     location: "Manali, Himachal Pradesh",
     image: "/assets/tour-guide/tour-guide3.png",
-    rating: 5,
+    rating: 5.0,
   },
 ];
 
@@ -53,7 +53,7 @@ export const TourGuidesSection = () => {
 
               <div className={TourGuidesStyles.rating}>
                 <Rating rating={tourGuideItem.rating} />
-                <span>{`(${tourGuideItem.rating})`}</span>
+                <span>{`(${(tourGuideItem.rating || 0)?.toFixed(1)})`}</span>
               </div>
             </div>
             {index !== tourGuidesData.length - 1 && <hr className={`hr`} />}

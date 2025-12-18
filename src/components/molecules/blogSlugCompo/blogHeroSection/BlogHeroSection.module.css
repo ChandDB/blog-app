@@ -27,4 +27,24 @@
     font-size: 28px;
     line-height: 40px;
   }
+
+  .blogHeroSection {
+    padding: 0 30px;
+  }
+
+  .blogHero {
+    width: 100%;
+    aspect-ratio: 3;
+  }
+}
+
+@media (max-width: 480px) {
+  .blogHeroSection {
+    padding: 0 15px;
+  }
+
+  .blogHero {
+    width: 100%;
+    aspect-ratio: 1.72;
+  }
 }

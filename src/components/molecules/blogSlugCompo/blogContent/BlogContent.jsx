@@ -17,15 +17,17 @@ const BlogContent = ({ post }) => {
   return (
     <>
       <div className={styles.profileSection}>
-        <ImageCompo
-          src={post.profileImg || "/assets/blog/alex-carter.png"}
-          alt="profileImage"
-          unoptimized
-          parentClassName={styles.profileImage}
-        />
-        <p className={`${styles.autherName} bodySemiBoldUppercase`}>
-          {post.auther}
-        </p>
+        <div className={styles.autherProfile}>
+          <ImageCompo
+            src={post.profileImg || "/assets/blog/alex-carter.png"}
+            alt="profileImage"
+            unoptimized
+            parentClassName={styles.profileImage}
+          />
+          <p className={`${styles.autherName} bodySemiBoldUppercase`}>
+            {post.auther}
+          </p>
+        </div>
         <p className={`bodySemiBoldUppercase`}>
           {dateFormatter.format(new Date(post.date))}
         </p>

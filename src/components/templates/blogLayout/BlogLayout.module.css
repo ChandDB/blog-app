@@ -3,11 +3,8 @@
   gap: 20px;
 }
 
-/* max-md */
-@media (max-width: 768px) {
-  .layout {
-    flex-direction: column;
-  }
+.main {
+  flex: 1;
 }
 
 .sidebar {
@@ -24,7 +21,17 @@
 
 @media (max-width: 768px) {
   .sidebar {
-    width: 100%;
     padding: 24px 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    width: 100%;
+    padding: 24px 0px;
   }
 }

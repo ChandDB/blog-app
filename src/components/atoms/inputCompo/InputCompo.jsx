@@ -11,7 +11,7 @@ const InputCompo = ({
 }) => {
   return (
     <span className={`${InputCompoStyles.wrapper} ${className}`}>
-      {label && <span className={InputCompoStyles.label}>{`${label}:`}</span>}
+      {label && <span className={InputCompoStyles.label}>{label}</span>}
 
       <input
         type={type}

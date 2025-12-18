@@ -101,20 +101,20 @@ p {
 }
 
 .desktopOnly {
-  display: none;
-}
-
-.mobileOnly {
   display: block;
 }
 
-@media (min-width: 768px) {
+.mobileTabletView {
+  display: none;
+}
+
+@media (max-width: 768px) {
   .desktopOnly {
-    display: block;
+    display: none;
   }
 
-  .mobileOnly {
-    display: none;
+  .mobileTabletView {
+    display: block;
   }
 }
 

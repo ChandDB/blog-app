@@ -4,6 +4,9 @@ import BlogLayout from "@/components/templates/blogLayout/BlogLayout";
 import { blogPosts } from "@/data/blogPosts";
 import RelatedArticalsSection from "@/components/molecules/blogSlugCompo/relatedArticalsSection/RelatedArticalsSection";
 import AutherAndNavigationSection from "@/components/molecules/blogSlugCompo/aboutAutherSection/AboutAutherSection";
+import AddCommentSection from "@/components/molecules/blogSlugCompo/addCommentSection/AddCommentSection";
+import CommentSection from "@/components/molecules/blogSlugCompo/commentSection/CommentSection";
+import SlugStyles from "@/styles/Slug.module.css";
 
 const BlogSlugPage = ({ post }) => {
   return (
@@ -15,9 +18,13 @@ const BlogSlugPage = ({ post }) => {
           <AutherAndNavigationSection post={post} />
         </div>
       </BlogLayout>
-      <div className="mobileOnly mainContainer">
-        <AutherAndNavigationSection post={post} />
+      <div className={`${SlugStyles.authorNavWrapper} mainContainer`}>
+        <div className="mobileTabletView">
+          <AutherAndNavigationSection post={post} />
+        </div>
+        <CommentSection />
       </div>
+      <AddCommentSection />
       <RelatedArticalsSection />
     </>
   );

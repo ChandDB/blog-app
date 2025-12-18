@@ -7,7 +7,7 @@ import styles from "./BlogHeroSection.module.css";
 
 const BlogHeroSection = ({ post }) => {
   return (
-    <>
+    <div className={styles.blogHeroSection}>
       <div className={styles.blogHeroHeader}>
         <BreadCrumbs />
         <h1 className={styles.headingLargeSemiBold}>{post.title}</h1>
@@ -19,7 +19,7 @@ const BlogHeroSection = ({ post }) => {
         parentClassName={styles.blogHero}
         imageClassName={styles.blogHeroImage}
       />
-    </>
+    </div>
   );
 };
 

@@ -13,7 +13,7 @@ const TextareaCompo = ({
 }) => {
   return (
     <span className={`${TextareaStyles.wrapper} ${className}`}>
-      {label && <span className={TextareaStyles.label}>{`${label}:`}</span>}
+      {label && <span className={TextareaStyles.label}>{label}</span>}
       <textarea
         rows={rows}
         className={`${TextareaStyles.textarea} ${

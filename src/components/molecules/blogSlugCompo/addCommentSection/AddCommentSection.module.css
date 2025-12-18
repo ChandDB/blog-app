@@ -16,23 +16,18 @@
 
 .formRow {
   display: flex;
-  gap: 0.75rem;
+  gap: 25px;
 }
 
 .leftColumn {
   display: flex;
   flex-direction: column;
-  gap: 0.75rem;
+  gap: 20px;
   width: 100%;
 }
 
 .inputWrapper {
   width: 100%;
-  gap: 0.25rem;
-}
-
-.input {
-  background-color: #d1d5db;
 }
 
 .textareaWrapper {
@@ -46,10 +41,10 @@
 }
 
 .bottomRow {
-  margin-top: 0.75rem;
+  margin-top: 20px;
   display: flex;
   align-items: stretch;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
 .ratingBox {
@@ -57,13 +52,16 @@
   width: 100%;
   align-items: center;
   justify-content: space-between;
-  border-radius: 0.375rem;
-  background-color: #d1d5db;
-  padding: 0.5rem;
+  border-radius: 12px;
+  background-color: #f5f5f5;
+  gap: 15px;
+  padding-right: 15px;
 }
 
 .ratingText {
   font-weight: 500;
+  color: #3e3232;
+  padding: 15px;
 }
 
 .ratingIcons {
@@ -85,7 +83,7 @@
   display: flex;
   align-items: center;
   gap: 8px;
-  border-radius: 0.5rem;
+  border-radius: 12px;
   padding: 10px 24px 10px 16px;
 }
 
@@ -96,22 +94,54 @@
   gap: 0.25rem;
   border-radius: 0.5rem;
   background-color: #111827;
-  padding: 0.5rem 0.75rem;
+  padding: 14px 24px;
   color: #ffffff;
   border: none;
   cursor: pointer;
 }
 
-@media (max-width: 768px) {
+.addCommentMobileOnly {
+  display: none;
+}
+
+.addCommentDesktopOnly {
+  display: block;
+}
+
+@media (max-width: 480px) {
+  .addCommentMobileOnly {
+    display: block;
+  }
+
+  .addCommentDesktopOnly {
+    display: none;
+  }
+
+  .ratingBox {
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    gap: 0;
+  }
+
   .formRow {
     flex-direction: column;
   }
 
   .bottomRow {
     flex-direction: column;
+    gap: 25px;
   }
 
   .submitButton {
     width: 100%;
+  }
+
+  .ratingIcons {
+    padding: 0px 0px 15px 0px;
+  }
+
+  .section {
+    padding: 30px 0 0 0;
   }
 }

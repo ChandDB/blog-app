@@ -4,7 +4,7 @@ export const blogPosts = [
     title: "The Ultimate Guide to Full-Body Workouts",
     auther: "Alex Carter",
     profileImg: "/assets/blog/alex-carter.png",
-    date: "2025-12-16T07:52:08.206Z",
+    date: "2025-01-23T07:52:08.206Z",
     heroImg: "/assets/blog/blog-hero1.png",
     autherDescription:
       "With over a decade in fitness, Alex specializes in strength training. Certified by NASM, he designs challenging yet achievable workout programs. His passion is helping clients build strength and confidence through personalized routines. Outside the gym, Alex enjoys running and outdoor adventures.",

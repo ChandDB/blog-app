@@ -57,6 +57,9 @@ const AddCommentSection = () => {
   } = useForm({
     resolver: yupResolver(AddCommentValidationSchema),
     mode: "onChange",
+    defaultValues: {
+      rating: 5,
+    },
   });
 
   const handleSubmitCommentForm = (data) => {
@@ -72,90 +75,94 @@ const AddCommentSection = () => {
   };
 
   return (
-    <div className={AddCommentStyles.section}>
-      <h2 className={AddCommentStyles.heading}>
-        <BlackDotSvg />
-        {`  Add A Comment`}
-      </h2>
+    <div className="mainContainer">
+      <div className={AddCommentStyles.section}>
+        <h2 className={AddCommentStyles.heading}>
+          <BlackDotSvg />
+          {`  Add A Comment`}
+        </h2>
 
-      <form onSubmit={handleSubmit(handleSubmitCommentForm)}>
-        <div className={AddCommentStyles.formRow}>
-          <div className={AddCommentStyles.leftColumn}>
-            <InputCompo
-              type="text"
-              label="Name"
-              placeholder="Name (e.g., JohnDoe)"
-              {...register("name")}
-              className={AddCommentStyles.inputWrapper}
-              inputClassName={AddCommentStyles.input}
-              supportiveText={errors?.name?.message}
-            />
+        <form onSubmit={handleSubmit(handleSubmitCommentForm)}>
+          <div className={AddCommentStyles.formRow}>
+            <div className={AddCommentStyles.leftColumn}>
+              <InputCompo
+                type="text"
+                label="Name"
+                {...register("name")}
+                className={AddCommentStyles.inputWrapper}
+                inputClassName={AddCommentStyles.input}
+                supportiveText={errors?.name?.message}
+              />
 
-            <InputCompo
-              type="text"
-              label="E-mail"
-              placeholder="example@gmail.com"
-              {...register("email")}
-              className={AddCommentStyles.inputWrapper}
-              inputClassName={AddCommentStyles.input}
-              supportiveText={errors?.email?.message}
-            />
-          </div>
-
-          <TextareaCompo
-            label="Comment"
-            placeholder="Write your Comment.."
-            rows={5}
-            {...register("comment")}
-            supportiveText={errors?.comment?.message}
-            className={AddCommentStyles.textareaWrapper}
-            textareaClassName={AddCommentStyles.textarea}
-          />
-        </div>
-
-        <div className={AddCommentStyles.bottomRow}>
-          <div className={AddCommentStyles.ratingBox}>
-            <p className={AddCommentStyles.ratingText}>
-              Rate the usefulness of the article.
-            </p>
-
-            <div className={AddCommentStyles.ratingIcons}>
-              {ratingIconList.map((item) => (
-                <button
-                  type="button"
-                  key={item.rating}
-                  onClick={(e) => {
-                    e.preventDefault();
-                    setValue("rating", item.rating, { shouldValidate: true });
-                  }}
-                  className={AddCommentStyles.ratingButton}
-                >
-                  {getValues("rating") === item.rating ? (
-                    <span
-                      className={AddCommentStyles.activeRating}
-                      style={{
-                        backgroundColor: item.color,
-                        color: "#fff",
-                      }}
-                    >
-                      {item.icon}
-                      <span>{item.content}</span>
-                    </span>
-                  ) : (
-                    <span style={{ color: item.color }}>{item.icon}</span>
-                  )}
-                </button>
-              ))}
+              <InputCompo
+                type="text"
+                label="E-mail"
+                {...register("email")}
+                className={AddCommentStyles.inputWrapper}
+                inputClassName={AddCommentStyles.input}
+                supportiveText={errors?.email?.message}
+              />
             </div>
+
+            <TextareaCompo
+              label="Comment"
+              placeholder="Search anything..."
+              rows={5}
+              {...register("comment")}
+              supportiveText={errors?.comment?.message}
+              className={AddCommentStyles.textareaWrapper}
+              textareaClassName={AddCommentStyles.textarea}
+            />
           </div>
 
-          <button type="submit" className={AddCommentStyles.submitButton}>
-            <ChatSvg fill="currentColor" />
-            <span className="mobileOnly">Send Comment</span>
-            <span className="desktopOnly">Send</span>
-          </button>
-        </div>
-      </form>
+          <div className={AddCommentStyles.bottomRow}>
+            <div className={AddCommentStyles.ratingBox}>
+              <p className={AddCommentStyles.ratingText}>
+                Rate The Usefulness Of The Article
+              </p>
+
+              <div className={AddCommentStyles.ratingIcons}>
+                {ratingIconList.map((item) => (
+                  <button
+                    type="button"
+                    key={item.rating}
+                    onClick={(e) => {
+                      e.preventDefault();
+                      setValue("rating", item.rating, { shouldValidate: true });
+                    }}
+                    className={AddCommentStyles.ratingButton}
+                  >
+                    {getValues("rating") === item.rating ? (
+                      <span
+                        className={AddCommentStyles.activeRating}
+                        style={{
+                          backgroundColor: item.color,
+                          color: "#fff",
+                        }}
+                      >
+                        {item.icon}
+                        <span>{item.content}</span>
+                      </span>
+                    ) : (
+                      <span style={{ color: item.color }}>{item.icon}</span>
+                    )}
+                  </button>
+                ))}
+              </div>
+            </div>
+
+            <button type="submit" className={AddCommentStyles.submitButton}>
+              <ChatSvg fill="currentColor" />
+              <span className={AddCommentStyles.addCommentMobileOnly}>
+                Send Comment
+              </span>
+              <span className={AddCommentStyles.addCommentDesktopOnly}>
+                Send
+              </span>
+            </button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

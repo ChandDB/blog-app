@@ -45,7 +45,7 @@
 .userInfo {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 10px;
 }
 
 .name {
@@ -62,6 +62,7 @@
 .rating {
   display: flex;
   align-items: center;
+  gap: 10px;
 }
 
 .date {
@@ -83,12 +84,13 @@
   letter-spacing: var(--letter-spacing-body);
   vertical-align: bottom;
   color: #10152e;
+  margin-top: 10px;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 1440px) {
   .topRow {
     flex-direction: column;
-    gap: 0.5rem;
+    gap: 10px;
   }
 
   .userInfo {

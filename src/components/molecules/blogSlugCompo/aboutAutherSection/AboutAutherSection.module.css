@@ -56,3 +56,9 @@
 .rotate {
   transform: rotate(180deg);
 }
+
+@media (max-width: 480px) {
+  .nevArticlesName {
+    display: none;
+  }
+}

@@ -55,7 +55,9 @@ const AutherAndNavigationSection = ({ post }) => {
             </span>
           </Link>
         </div>
-        <div className={aboutAutherStyles.navRow}>
+        <div
+          className={`${aboutAutherStyles.navRow} ${aboutAutherStyles.nevArticlesName}`}
+        >
           <p>5 Tips for Better Cardio Sessions</p>
           <p>Meal Prep Basics for Gym Enthusiasts</p>
         </div>

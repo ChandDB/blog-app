@@ -9,13 +9,13 @@ const Rating = ({ rating, max = 5 }) => {
 
         if (rating >= starValue) {
           // full star
-          return <StarSvg key={i} fill="#F3BB2E" />;
+          return <StarSvg key={i} fill="#FFBB00" />;
         } else if (rating >= starValue - 0.5) {
           // half star
           return <StarSvg key={i} fill="url(#halfGradient)" />;
         } else {
           // empty star
-          return <StarSvg key={i} fill="#5B5B5B" />;
+          return <StarSvg key={i} />;
         }
       })}
     </div>

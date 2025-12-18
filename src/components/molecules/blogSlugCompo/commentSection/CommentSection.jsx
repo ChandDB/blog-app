@@ -56,7 +56,9 @@ const CommentSection = () => {
 
                     <div className={commentStyles.rating}>
                       <Rating rating={commentItem.rating} />
-                      <span>{`(${commentItem.rating})`}</span>
+                      <span>{`(${(commentItem.rating || 0)?.toFixed(
+                        1
+                      )})`}</span>
                     </div>
                   </div>
 
